@@ -1,0 +1,29 @@
+version: "3.7"
+
+services:
+  app:
+    build: .
+    ports:
+      - "8090:8080"
+    networks:
+      - s-network
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/spring_trial
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: spring_trial
+      MYSQL_USER: appuser
+      MYSQL_PASSWORD: appuserpassword
+    ports:
+      - "3307:3306"
+    networks:
+      - s-network
+
+networks:
+  s-network:
+    driver: bridge
