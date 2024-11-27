@@ -1,5 +1,0 @@
-com\XYZBank\BankSys\Config\JwtTokenProvider.class
-com\XYZBank\BankSys\Config\SecurityConfig.class
-com\XYZBank\BankSys\BankingSystemApplication.class
-com\XYZBank\BankSys\Config\JwtAuthenticationFilter.class
-com\XYZBank\BankSys\Controller\TransactionController.class
